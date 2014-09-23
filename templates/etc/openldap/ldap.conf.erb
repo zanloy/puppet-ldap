@@ -21,11 +21,9 @@ binddn <%= @binddn %>
 bindpw <%= @bindpw %>
 <% end -%>
 
-# @nsswitch = <%= @nsswitch %>
-
 <% if @nsswitch == true then -%>
 # DNs in groups
-#nss_schema         rfc2307bis
+nss_schema         rfc2307bis
 #nss_map_attribute  uniquemember member
 #nss_map_attribute memberuid    member
 #nss_getgrent_skipmembers yes
