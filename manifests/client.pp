@@ -169,6 +169,7 @@
 class ldap::client(
   $uri,
   $base,
+  $scope          = false,
   $version        = '3',
   $timelimit      = 30,
   $bind_timelimit = 30,
