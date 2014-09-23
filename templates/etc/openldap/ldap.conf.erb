@@ -18,6 +18,8 @@ binddn <%= @binddn %>
 bindpw <%= @bindpw %>
 <% end -%>
 
+# @nsswitch = <%= @nsswitch %>
+
 <% if @nsswitch == true then -%>
 # DNs in groups
 #nss_schema         rfc2307bis
