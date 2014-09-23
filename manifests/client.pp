@@ -272,9 +272,9 @@ class ldap::client(
       uri         => $uri,
       base        => $base,
       module_type => $ensure ? {
-                        'present' => 'ldap',
-                        default   => 'none'
-                      },
+        'present' => 'ldap',
+        default   => 'none'
+      },
     }
   }
 
