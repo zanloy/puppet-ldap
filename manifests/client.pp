@@ -211,13 +211,13 @@ class ldap::client(
     group   => $ldap::params::group,
   }
 
-  #file { $ldap::params::prefix:
-  #  ensure  => $ensure ? {
-  #                present => directory,
-  #                default => absent,
-  #              },
-  #  require => Package[$ldap::params::package],
-  #}
+  file { $ldap::params::prefix:
+    ensure  => $ensure ? {
+                  present => directory,
+                  default => absent,
+                },
+    require => Package[$ldap::params::package],
+  }
 
   if($sudoers_base) {
     if(! $sudoers_filter) {
@@ -228,7 +228,7 @@ class ldap::client(
   file { "${ldap::params::prefix}/${ldap::params::config}":
     ensure => file,
     content => template("ldap/${ldap::params::prefix}/${ldap::params::config}.erb"),
-    #require => File[$ldap::params::prefix],
+    require => File[$ldap::params::prefix],
   }
 
   # Configurations based on operating system release
