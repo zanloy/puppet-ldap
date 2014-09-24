@@ -227,7 +227,7 @@ class ldap::client(
 
   file { "${ldap::params::prefix}/${ldap::params::config}":
     content => template("ldap/${ldap::params::prefix}/${ldap::params::config}.erb"),
-    require => File[$ldap::params::prefix],
+    #require => File[$ldap::params::prefix],
   }
 
   # Configurations based on operating system release
