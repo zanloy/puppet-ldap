@@ -109,7 +109,7 @@ class ldap::params {
 
       $package   = [ 'openldap', 'openldap-clients' ]
 
-      $prefix    = '/etc/openldap'
+      $prefix    = '/etc/'
       $owner     = 'root'
       $group     = 'root'
       $config    = 'ldap.conf'
