@@ -1,4 +1,4 @@
-class ldap::os::CentOS {
+class ldap::os::centos {
 
   file { '/etc/ldap.conf':
     ensure  => link,
