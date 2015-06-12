@@ -28,9 +28,9 @@ nss_schema         rfc2307bis
 #nss_map_attribute memberuid    member
 #nss_getgrent_skipmembers yes
 
-nss_base_passwd <%= @nss_passwd %>,<%= @base %>
-nss_base_shadow <%= @nss_shadow %>,<%= @base %>
-nss_base_group  <%= @nss_group  %>,<%= @base %>
+nss_base_passwd <%= @nss_passwd %>
+nss_base_shadow <%= @nss_shadow %>
+nss_base_group  <%= @nss_group  %>
 nss_initgroups_ignoreusers root daemon bin sys sync games man lp mail news uucp proxy www-data backup list irc gnats nobody libuuid statd sshd puppet
 
 <% end -%>
@@ -52,9 +52,5 @@ sudoers_debug         <%= @sudoers_debug %>
 ssl           start_tls
 tls_reqcert   never
 tls_cacertdir <%= scope.lookupvar('ldap::params::cacertdir') %>
-<% else -%>
-#ssl           start_tls
-#tls_reqcert   never
-#tls_cacertdir <%= scope.lookupvar('ldap::params::cacertdir') %>
 <% end -%>
 
