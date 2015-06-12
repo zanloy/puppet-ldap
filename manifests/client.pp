@@ -43,8 +43,7 @@
 #    *Optional* (defaults to false)
 #
 #  [ssl_cert]
-#    Filename for the CA (or self signed certificate). It should
-#    be located under puppet:///files/ldap/
+#    Filename for the CA (or self signed certificate).
 #    *Optional* (defaults to false)
 #
 #  [nsswitch]
@@ -255,7 +254,7 @@ class ldap::client(
       owner   => 'root',
       group   => $ldap::params::group,
       mode    => '0644',
-      source  => "puppet:///files/ldap/${ssl_cert}",
+      source  => $ssl_cert,
       require => File[$ldap::params::cacertdir],
     }
 
