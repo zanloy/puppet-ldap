@@ -46,6 +46,10 @@
 #    Filename for the CA (or self signed certificate).
 #    *Optional* (defaults to false)
 #
+#  [ssl_cert_source]
+#    Source for the CA cert.
+#    *Optional* (defaults to false)
+#
 #  [nsswitch]
 #    If enabled (nsswitch => true) enables nsswitch to use
 #    ldap as a backend for password, group and shadow databases.
@@ -254,7 +258,7 @@ class ldap::client(
       owner   => 'root',
       group   => $ldap::params::group,
       mode    => '0644',
-      source  => $ssl_cert,
+      source  => $ssl_cert_source,
       require => File[$ldap::params::cacertdir],
     }
 
