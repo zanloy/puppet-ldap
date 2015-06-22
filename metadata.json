@@ -1,0 +1,20 @@
+{
+  "name": "zanloy-ldap",
+  "version": "0.2.6",
+  "author": "zanloy",
+  "summary": "Manage OpenLDAP via puppet.",
+  "license": "Apache-2.0",
+  "source": "https://github.com/zanloy/puppet-ldap",
+  "project_page": "https://github.com/zanloy/puppet-ldap",
+  "issues_url": "https://github.com/zanloy/puppet-ldap/issues",
+  "description": "Manage openldap configuration via puppet.",
+  "dependencies": [],
+  "operatingsystem_support": [
+    {"operatingsystem": "ArchLinux"},
+    {"operatingsystem": "CentOS"},
+    {"operatingsystem": "Debian"},
+    {"operatingsystem": "OracleLinux"},
+    {"operatingsystem": "RedHat"},
+    {"operatingsystem": "Ubuntu"}
+  ]
+}
